@@ -7,10 +7,11 @@ services:
     ports: 
       - 8181:80
     restart: always
-    volumes:
-      - /Users/flaviostutz/Documents/development/flaviostutz/leaflet-demos/src/:/usr/share/nginx/html/
+    # volumes:
+    #   - /Users/flaviostutz/Documents/development/flaviostutz/leaflet-demos/src/:/usr/share/nginx/html/
     environment:
-      - WFS_URL=http://localhost:8080/
+      - GEOJSON_URL=http://localhost:8080/collections/tests/items
+      - MAPBOX_VECTOR_TILE_URL=http://localhost:3000/tiles/tests/{z}/{x}/{y}.mvt
 
   wfs3:
     image: flaviostutz/wfs3
