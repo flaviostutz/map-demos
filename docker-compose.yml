@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
 
-  leaflet-demo:
+  map-demo:
     build: .
     ports: 
       - 8181:80
@@ -11,7 +11,7 @@ services:
     #   - /Users/flaviostutz/Documents/development/flaviostutz/leaflet-demos/src/:/usr/share/nginx/html/
     environment:
       - GEOJSON_URL=http://localhost:8080/collections/tests/items
-      - MAPBOX_VECTOR_TILE_URL=http://localhost:3000/tiles/tests/{z}/{x}/{y}.mvt
+      - MAPBOX_VECTOR_TILE_URL=http://localhost:3000/tiles/tests/{z}/{x}/{y}.mvt?limit=100
 
   wfs3:
     image: flaviostutz/wfs3
