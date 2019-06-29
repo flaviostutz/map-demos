@@ -18,5 +18,7 @@ services:
 
 ```
 
+* Run 'docker-compose up'
+
 * Open browser at 'http://localhost:8181' and open demo maps
 
