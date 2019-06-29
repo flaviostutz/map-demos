@@ -4,6 +4,7 @@ services:
 
   map-demos:
     build: .
+    image: flaviostutz/map-demos
     ports: 
       - 8181:80
     restart: always
@@ -13,4 +14,3 @@ services:
     #   - GEOJSON_URL=http://localhost:8080/collections/tests/items
     #   - MAPBOX_VECTOR_TILE_URL=http://localhost:3000/tiles/tests/{z}/{x}/{y}.mvt?limit=100
 
-    
