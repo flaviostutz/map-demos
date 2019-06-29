@@ -10,9 +10,7 @@ ENV GEOJSON_URL ''
 ENV MAPBOX_VECTOR_TILE_URL ''
 
 ADD /src/ /usr/share/nginx/html/
-
 ADD /default.conf /etc/nginx/conf.d/
-
 ADD /startup.sh /
 
 CMD ["/startup.sh"]

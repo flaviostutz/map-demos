@@ -37,14 +37,14 @@
                     fillColor: '#06cccc',
                     color: '#06cccc',
                     fillOpacity: 0.3,
-                    opacity: 0.4,
+                    opacity: 0.5,
                 }
             }
 
             var tilesUrl = "$MAPBOX_VECTOR_TILE_URL"
             var tilesLayer = L.vectorGrid.protobuf(tilesUrl, {
                 vectorTileLayerStyles: vectorStyles,
-                attribution: '© AgroWS, © AgroWS. A Banco do Brasil initiative'
+                attribution: '© test'
             });
             tilesLayer.addTo(map);
 

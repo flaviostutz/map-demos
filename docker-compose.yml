@@ -24,14 +24,6 @@ services:
       - POSTGRES_PASSWORD=wfs3
       - POSTGRES_DBNAME=wfs3
 
-  # pgweb:
-  #   image: sosedoff/pgweb:0.11.2
-  #   ports:
-  #     - 8081:8081
-  #   restart: always
-  #   environment:
-  #     - DATABASE_URL=postgres://wfs3:wfs3@postgis:5432/wfs3?sslmode=disable
-
   pgadmin:
     image: dpage/pgadmin4:4.8
     ports:
@@ -42,7 +34,6 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=admin
 
   postgis:
-    # image: timescale/timescaledb-postgis:1.3.1-pg9.6
     image: mdillon/postgis:11-alpine
     ports:
       - 5432:5432

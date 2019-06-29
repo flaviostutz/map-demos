@@ -51,31 +51,13 @@
                 }
             }
 
-            // var baseballIcon = L.icon({
-            //     iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/images/marker-icon.png',
-            //     iconSize: [32, 32],
-            //     iconAnchor: [16, 16],
-            //     popupAnchor: [0, -28]
-            // });
-
             fetch('$GEOJSON_URL')
             .then(response => response.json())
             .then(json0 => {
                 var coorsLayer = L.geoJSON(json0, {
-                    // pointToLayer: function (feature, latlng) {
-                    //     return L.marker(latlng, {icon: baseballIcon});
-                    // },
                     onEachFeature: onEachFeature
                 }).addTo(map);
             }).catch(error => console.error(error))
-
-    // var map = L.map('map').setView([99, 0], 2);
-
-    // var featureStyle = {
-    //     "color": "#ff7800",
-    //     "weight": 5, 
-    //     "opacity": 0.2
-    // };
 
     </script>
 

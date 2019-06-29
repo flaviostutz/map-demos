@@ -1,2 +1,3 @@
-# leaflet-demos
-Demos showing maps built using Leaflet
+# map-demos
+Demos showing maps on various sources
+
