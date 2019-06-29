@@ -2,48 +2,15 @@ version: '3.7'
 
 services:
 
-  map-demo:
+  map-demos:
     build: .
     ports: 
       - 8181:80
     restart: always
     # volumes:
     #   - /Users/flaviostutz/Documents/development/flaviostutz/leaflet-demos/src/:/usr/share/nginx/html/
-    environment:
-      - GEOJSON_URL=http://localhost:8080/collections/tests/items
-      - MAPBOX_VECTOR_TILE_URL=http://localhost:3000/tiles/tests/{z}/{x}/{y}.mvt?limit=100
+    # environment:
+    #   - GEOJSON_URL=http://localhost:8080/collections/tests/items
+    #   - MAPBOX_VECTOR_TILE_URL=http://localhost:3000/tiles/tests/{z}/{x}/{y}.mvt?limit=100
 
-  wfs3:
-    image: flaviostutz/wfs3
-    ports: 
-      - 8080:8080
-    restart: always
-    environment:
-      - POSTGRES_HOST=postgis
-      - POSTGRES_USERNAME=wfs3
-      - POSTGRES_PASSWORD=wfs3
-      - POSTGRES_DBNAME=wfs3
-
-  pgadmin:
-    image: dpage/pgadmin4:4.8
-    ports:
-      - 8081:80
-    restart: always
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin
-      - PGADMIN_DEFAULT_PASSWORD=admin
-
-  postgis:
-    image: mdillon/postgis:11-alpine
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_USER=wfs3
-      - POSTGRES_PASSWORD=wfs3
-      - POSTGRES_DB=wfs3
-    volumes:
-      - pg-data:/var/lib/postgresql/data
-
-volumes:
-  pg-data:
-
+    
