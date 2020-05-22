@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+
+  sut:
+    build: tests/.
+    environment:
+      - WAIT_CONNECT_HOST=map-demos
+      - WAIT_CONNECT_PORT=80
+      - WAIT_TIME_SECONDS=2
+      - JEST_TEST_TIMEOUT=10000
+      - MAP_URL=http://map-demos/
+    # volumes:
+      # - ./tests/__tests__:/app/__tests__
+      # - ./tests/screenshots:/app/screenshots
+    # command: sleep 99999
+  
+  map-demos:
+    build: .
+    environment:
+      - GEOJSON_URL=http://localhost:8080/collections/tests/items
+      - MAPBOX_VECTOR_TILE_URL=http://localhost:3000/tiles/tests/{z}/{x}/{y}.mvt?limit=100
+    ports:
+      - 8181:80
