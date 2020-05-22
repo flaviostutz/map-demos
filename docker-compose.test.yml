@@ -10,6 +10,8 @@ services:
       - WAIT_TIME_SECONDS=2
       - JEST_TEST_TIMEOUT=10000
       - MAP_URL=http://map-demos/
+    depends_on: 
+      - map-demos
     # volumes:
       # - ./tests/__tests__:/app/__tests__
       # - ./tests/screenshots:/app/screenshots
