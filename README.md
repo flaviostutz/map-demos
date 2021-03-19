@@ -1,4 +1,5 @@
 # map-demos
+
 Demos showing maps on various sources
 
 ## Usage
@@ -22,3 +23,6 @@ services:
 
 * Open browser at 'http://localhost:8181' and open demo maps
 
+## Flow
+
+![WFSDiagram](WFSDiagram.png)
